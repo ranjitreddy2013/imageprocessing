@@ -16,6 +16,14 @@ NFS mount cluster file system on host
 mount maprdemo:/mapr/demo.mapr.com/user  /user
 ```
 
+Install Tesseract software on host computer
+```
+If it is Mac using brew software,
+brew install tesseract
+brew install leptonica
+```
+
+
 
 ## Setup
 
