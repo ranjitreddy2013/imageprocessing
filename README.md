@@ -1,5 +1,3 @@
-# imageprocessing
-
 This project contains sample code for processing image documents using Tesseract software. 
 
 
@@ -36,8 +34,6 @@ Install and startup Elasticsearch:
 Launch Elasticsearch
 cd $ELASTIC_SEARCH_HOME 
 ./bin/elasticsearch
-
-
 ```
 
 Create MapR-DB table and enable table replication:
@@ -53,12 +49,10 @@ Setup table replication
 $ $MAPR_HOME/bin/register-elasticsearch -r localhost -e $ELASTIC_SEARCH_HOME -u mapr -y -c <elastic search node name>
 $ $MAPR_HOME/bin/register-elasticsearch -l
 $ $MAPR_HOME/bin/maprcli table replica elasticsearch autosetup -path /<srctable>  -target <elastic search node nam> -index <elastic search index>  -type json
-
-
 ```
 
 
-and run the application using:
+Run the application:
 
 ```
 mvn exec:java -Dexec.mainClass="com.mapr.ocr.text.ImageToText"
